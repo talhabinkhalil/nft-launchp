@@ -27,7 +27,11 @@ function App() {
           <div id="section#1" className="my-8">
             {address ? (
               <div className="text-center">
-                <h1 className="my-9">{address}</h1>
+                <h1 className="my-9">
+                  {address.substring(0, 4) +
+                    "...." +
+                    address.substring(address.length - 5)}
+                </h1>
               </div>
             ) : (
               <div
